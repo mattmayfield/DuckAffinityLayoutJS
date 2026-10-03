@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.Build.NoTargets/3.7.134">
+  <PropertyGroup>
+    <!-- A TargetFramework is syntactically required by MSBuild, but nothing will compile -->
+    <TargetFramework>net8.0</TargetFramework> 
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Include all files recursively, while ignoring standard build artifacts -->
+    <None Include="**\*" Exclude="$(DefaultItemExcludes);obj\**;bin\**" />
+  </ItemGroup>
+</Project>
